@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      header {
+        background-color: rgb(218, 209, 209);
+        height: 70px;
+      
+      }
+      .parent {
+        display: flex;
+      }
+      .left img {
+        height: 40px;
+        position: relative;
+        margin-left: 80px;
+        top: 15px;
+      }
+      .right {
+        display: flex;
+        position: relative;
+        bottom: 10px;
+        
+      }
+      nav ul li {
+        display: inline-block;
+        padding: 12px;
+        margin: 8px;
+        font-family: Okra, Helvetica, sans-serif;
+      
+      }
+      
+      li {
+        cursor: pointer;
+      }
+      .search {
+        margin: 250px;
+        position: relative;
+        bottom: 250px;
+      }
+      .search input {
+        text-align: center;
+        display: flex;
+        height: 30px;
+        width: 140%;
+        border-radius: 40px;
+        border: none;
+      }
+      .search i {
+        position: relative;
+        top: 28px;
+        margin-left: 5px;
+      }
+      .logo {
+        position: absolute;
+        margin-left: 1200px;
+        bottom: 569px;
+      }
+      .hed {
+        display: flex;
+        background-color: rgb(9, 29, 9);
+        height: 70px;
+        position: relative;
+      }
+      .hed h2 {
+        position: relative;
+        margin-left: 100px;
+        padding: 7px;
+        font-size: xx-large;
+        color: antiquewhite;
+        bottom: 20px;
+      }
+      button {
+        position: relative;
+        margin-left: 840px;
+        top: 15px;
+        height: 30px;
+        border-radius: 20px;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+        border: none;
+      }
+      .mainbox {
+        display: flex;
+        background-color: rgb(215, 226, 226);
+        height: 195px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        position: relative;
+        left: 120px;
+        margin-top: 30px;
+        border-radius: 5px;
+        border: 1px solid rgb(160, 158, 158);
+      }
+      .box {
+        background-color: rgb(20, 87, 87);
+        height: 190px;
+        width: 1080px;
+      }
+      .main h3 {
+        position: relative;
+        bottom: 200px;
+        margin-left: 87%;
+        font-size: 10px;
+        color: aliceblue;
+      }
+      .main img {
+        flex: content;
+        position: relative;
+        height: 200px;
+        left: 20px;
+      }
+      h5 {
+        position: relative;
+        bottom: 210px;
+        margin-left: 140px;
+        font-size: medium;
+        color: aliceblue;
+      }
+      .h1 {
+        position: relative;
+        display: flex;
+        margin-left: 140px;
+        bottom: 210px;
+        color: aliceblue;
+        font-size: x-large;
+      }
+      .boxp p {
+        position: relative;
+        margin-left: 140px;
+        bottom: 210px;
+        color: aliceblue;
+      }
+      .btn3 {
+        position: relative;
+        bottom: 275px;
+      }
+      .btn3 button {
+        width: 120px;
+        height: 40px;
+        position: relative;
+        margin-left: 85%;
+        border: none;
+      }
+      .foodcart {
+        height: 220px;
+        justify-content: center;
+        align-items: center;
+        width: 80%;
+        position: relative;
+        margin-left: 115px;
+      }
+      .food {
+        position: relative;
+        top: 30px;
+      }
+      .foodmenu {
+        display: flex;
+        justify-content: center;
+        position: relative;
+      }
+      .foodmenu img {
+        height: 90px;
+        border-radius: 100px;
+        padding: 50px;
+      }
+      .menunames {
+        display: flex;
+        position: relative;
+        padding: 50px;
+      }
+      .menunames h3 {
+        position: relative;
+        padding: 50px;
+        font-size: medium;
+      }
+
+      .card2 {
+        background-color: rgb(245, 241, 238);
+      }
+      .allcards {
+        align-items: center;
+        justify-content: center;
+
+        display: flex;
+        width: 100%;
+        height: 300px;
+        column-gap: 15px;
+        overflow: hidden;
+      }
+      .barista {
+        display: flex;
+        width: 100%;
+      }
+      .barista .right-br {
+        float: right;
+        position: relative;
+        left: 830px;
+        font-family: SoDoSans_Semibold, Helvetica, sans-serif;
+        color: darkgreen;
+        top: 30px;
+      }
+      .barista .left-br {
+        position: relative;
+        font-family: SoDoSans_Bold, Helvetica, sans-serif;
+        font-size: x-large;
+        color: rgb(11, 12, 12);
+        top: 30px;
+        left: 60px;
+      }
+      .side-img {
+        float: right;
+        position: relative;
+        left: 95%;
+        top: 20px;
+      }
+      .side-img img {
+        height: 70px;
+      }
+      .main-c {
+        display: flex;
+        position: relative;
+        background-color: white;
+        height: 150px;
+        width: 27%;
+        border-radius: 5px;
+        border: 20px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      }
+      .c-img {
+        top: 50px;
+      }
+
+      .c-img img {
+        width: 70px;
+        height: 75px;
+        border-radius: 5px;
+        position: relative;
+        left: 30px;
+        top: 15px;
+      }
+
+      .c-img p {
+        position: relative;
+        left: 35px;
+        top: 10px;
+        font-weight: 800;
+      }
+      .right-of {
+        width: 100%;
+      }
+      .right-of button {
+        position: relative;
+        right: 800px;
+      }
+      .right-of img {
+        position: relative;
+        height: fit-content;
+        top: 18px;
+        margin-left: 40px;
+      }
+      .right-of span {
+        position: relative;
+        left: 40px;
+        bottom: 35px;
+        font-size: 10px;
+      }
+      .right-of h4 {
+        position: relative;
+        width: 200px;
+        left: 38px;
+        bottom: 7px;
+        font-family: SoDoSans_Semibold, Helvetica, sans-serif;
+      }
+
+      .button button {
+        position: relative;
+        float: left;
+        right: 100%;
+        width: 12%;
+        height: 35px;
+        top: 100px;
+        background-color: darkgreen;
+        color: aliceblue;
+      }
+      .coffe-head {
+        background-color: blue;
+        position: relative;
+        top: 50px;
+      }
+      .coffe-img img {
+        position: relative;
+        width: 80%;
+        height: 400px;
+        top: 40px;
+        left: 130px;
+        border-radius: 20px;
+      }
+      .coffe-of h4 {
+        color: aliceblue;
+        position: relative;
+      }
+      footer {
+        position: relative;
+        text-align: center;
+        top: 230px;
+        background-color: rgb(3, 66, 6);
+      }
+      .footer-header {
+        display: flex;
+      }
+      .footer-left {
+        position: relative;
+      }
+      .footer-left img {
+        position: relative;
+        left: 60px;
+        top: 100px;
+      }
+      .footer-right {
+        display: flex;
+        position: relative;
+        left: 870px;
+        top: 20px;
+      }
+      .sociallinks {
+        position: relative;
+        left: px;
+      }
+      .sociallinks i {
+        position: relative;
+        bottom: 40px;
+        width: 30px;
+      }
+      .foo-img {
+        position: relative;
+        bottom: 100px;
+        left: 120px;
+      }
+
+      .footermenu {
+        display: flex;
+        position: relative;
+        justify-content: center;
+      }
+      .footermenuitem h3 {
+        font-size: large;
+        font-family: SoDoSans_Semibold, Helvetica, sans-serif;
+        margin: 70px;
+        color: azure;
+      }
+      .footermenuitem {
+        position: relative;
+        bottom: 60px;
+      }
+      .footermenuitem ul li {
+        position: relative;
+        list-style: none;
+        bottom: 50px;
+      }
+      .footermenuitem a img {
+        height: 30px;
+        width: 90px;
+      }
+      .foo-img {
+        display: flex;
+        flex-direction: column;
+      }
+
+      footer h3 {
+        color: black;
+      }
+      footer ul li {
+        padding: 5px;
+        align-items: center;
+      }
+      .hr {
+        margin-top: 250px;
+      }
+      .lastp p {
+        margin-top: 50px;
+      }
+      #Our {
+        position: relative;
+        right: 20px;
+        color: aliceblue;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Cof {
+        position: relative;
+        right: 25px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Ou {
+        position: relative;
+        right: 15px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Dive {
+        position: relative;
+        right: 50px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Cumm {
+        position: relative;
+        right: 40px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Ea {
+        position: relative;
+        right: 15px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Env {
+        position: relative;
+        right: 30px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Stew {
+        position: relative;
+        right: 38px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Learn {
+        position: relative;
+        right: 38px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Pri {
+        position: relative;
+        right: 20px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #FAq {
+        position: relative;
+        right: 49px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Star {
+        position: relative;
+        left: 8px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #App {
+        position: relative;
+        right: 9px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Cus {
+        position: relative;
+        right: 11px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #St {
+        position: relative;
+        left: 33px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Deliv {
+        position: relative;
+        right: 43px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Sea {
+        position: relative;
+        right: 15px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Off {
+        position: relative;
+        left: 85px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Loya {
+        position: relative;
+        left: 65px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Loya {
+        position: relative;
+        right: 38px;
+        color: white;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+      #Beve {
+        position: relative;
+        left: 7px;
+        color: aliceblue;
+        font-family: SoDoSans_Light, Helvetica, sans-serif;
+      }
+    
+      /*c3*/
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="parent">
+        <div class="left">
+          <img src="https://www.starbucks.in/assets/icon/logo.png" alt="" />
+        </div>
+        <div class="right">
+          <nav>
+            <ul>
+              <li>Home</li>
+              <li>Gift</li>
+              <li>Order</li>
+              <li>Pay</li>
+              <li>Store</li>
+            </ul>
+          </nav>
+        </div>
+        <div class="search">
+          <i class="fa-solid fa-magnifying-glass gg"></i>
+          <input type="text" placeholder="Looking For Something specific? " />
+        </div>
+      </div>
+      <div class="logo">
+        <img
+          src="https://www.starbucks.in/assets/icon/account_thin.svg"
+          alt=""
+        />
+      </div>
+    </header>
+    <div class="hed">
+      <h2>Starbucks</h2>
+      <button>Know More</button>
+    </div>
+    <div class="mainbox">
+      <div class="box">
+        <div class="main">
+          <img
+            src="https://preprodtsbstorage.blob.core.windows.net/cms/uploads/285_x_595_App_removebg_preview_2_c4bc942184.png"
+            alt=""
+          />
+          <h3>*T&C Apply</h3>
+        </div>
+        <h5>Starbucks</h5>
+        <div class="h1">Beverage Subscribtion</div>
+        <div class="boxp">
+          <p>
+            Starbucks Subscribtion is Back! Sip Your Favorites for Less.Tap for
+            Details T&CApply.
+          </p>
+        </div>
+        <div class="btn3">
+          <button>Know More</button>
+        </div>
+      </div>
+    </div>
+    <div class="foodcart">
+      <div class="food">
+        <h1>Handcrafted Curations</h1>
+      </div>
+      <div class="foodmenu">
+        <img
+          src="https://www.starbucks.in/assets/icon/Bestseller.webp"
+          alt=""
+        />
+
+        <img src="https://www.starbucks.in/assets/icon/Drinks.webp" alt="" />
+
+        <img src="https://www.starbucks.in/assets/icon/Food.webp" alt="" />
+
+        <img
+          src="https://www.starbucks.in/assets/icon/Merchandise.webp"
+          alt=""
+        />
+        <img
+          src="https://www.starbucks.in/assets/icon/CoffeeAtHome.webp"
+          alt=""
+        />
+        <img
+          src="https://www.starbucks.in/assets/icon/ReadyToEat.webp"
+          alt=""
+        />
+      </div>
+    </div>
+
+    <div class="card2">
+      <div class="barista">
+        <div class="side-img">
+          <img
+            src="https://www.starbucks.in/assets/icon/greyleafright.svg"
+            alt=""
+          />
+        </div>
+        <div class="left-br">Barista Recommends</div>
+        <div class="right-br">View Menu</div>
+      </div>
+      <div class="allcards">
+        <div class="main-c">
+          <div class="c-img">
+            <img
+              src="https://www.starbucks.in/assets/icon/placeholder.webp"
+              alt=""
+            />
+            <p>$283.50</p>
+          </div>
+          <div class="right-of">
+            <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="" />
+
+            <h4>cappuccino</h4>
+            <span>short()</span>
+          </div>
+          <div class="button">
+            <button>Add items</button>
+          </div>
+        </div>
+        <div class="main-c">
+          <div class="c-img">
+            <img
+              src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/100447.webp"
+              alt=""
+            />
+            <p>$309.75</p>
+          </div>
+          <div class="right-of">
+            <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="" />
+
+            <h4>Signature Hot Chocolate</h4>
+            <span>short(237ml).228kcal</span>
+          </div>
+          <div class="button">
+            <button>Add items</button>
+          </div>
+        </div>
+        <div class="main-c">
+          <div class="c-img">
+            <img
+              src="https://starbucksstatic.cognizantorderserv.com/Items/Small/webP/112573.webp"
+              alt=""
+            />
+            <p>$378.50</p>
+          </div>
+          <div class="right-of">
+            <img src="https://www.starbucks.in/assets/icon/veg.svg" alt="" />
+
+            <h4>Vanilla Milkshake</h4>
+            <span>Tall(354ml) per serve(354ml)-41kcal</span>
+          </div>
+          <div class="button">
+            <button>Add items</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="coffe-head">
+      <div class="coffe-img">
+        <img
+          src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBwgHBgkIBwgKCgkLDRYPDQwMDRsUFRAWIB0iIiAdHx8kKDQsJCYxJx8fLT0tMTU3Ojo6Iys/RD84QzQ5OjcBCgoKDQwNGg8PGjclHyU3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3Nzc3N//AABEIAJQA3AMBIgACEQEDEQH/xAAbAAACAwEBAQAAAAAAAAAAAAAEBQIDBgABB//EAEEQAAIBAgUBBgQFAgMGBgMAAAECAwQRAAUSITFBBhMiUWFxFDKBkSOhscHRFUJS4fAzYnKCovEWJJLC0uIHQ1P/xAAZAQADAQEBAAAAAAAAAAAAAAABAgMABAX/xAAnEQACAgICAQQCAgMAAAAAAAAAAQIRAyESMQQTIkFRYXEFoRQycv/aAAwDAQACEQMRAD8A+WQVgqwNgsw1BVB3sbcYKlkgh1wlGBKkq4O4A33Pn7cYWvG1GNcE6qhA8YHib0xY0jTI3fSRllsWTSVI+/rbHM4K9dFVIJljSCzElNQOhhvf38x/lgrXUvSxdz+O8ilSYyAOb33/ANfsNFDOGFTAsSlvApbSABz0sOMeOrUssdZEXErD8QtexB6EfQ8eW2FasZExTSa4okVEdj4ndgLAc/fEJKQTMdXd6b3KlrkEbcgcbX6bffBUktZUzVBXuyist9YAubcbDyF8VwOz1IBpyrEBQqD/AGhJsQSef0wOUkHiiJHwbu6UzKI/C/isXuBYccXP+usKZ6dEdwqNIlgocXGroL4PzDL6jL4ilQJVqGkC6JCLgAX33JvvfB1PSUEmRVT1LSmrQXhRPlcXF9XlvbCPIq2FQFkdHNqjqAe7EzhWIGwkPAO3Gx9rHAjxThw4KK8LlRJySFIuw8/z2thl8XLTd3GsKSgxEKkig6Axb05FsWStHNRoVgKxMgBU/OLXsOd+TbcYPJrbRmrF9aO/jhqIzYNcWH9rcm384GgH4EJlVgyzmxAtzY4Kpn1yy0sfdleWBNht19McyoJKhUjCR+D8MC3jI59N7jBTr2h/IvqoxLE5IbVrYf8AWMWSVhpxEndgstmK2udPlgsR945ZCCCWbSdrkgbfrhNFFLPmRT5pCSNt7kiw/UYpGpLYslXQ1oFiFP3k0bLotpH/APQXNhx0xbIX+D0o1llZnYHbS1hYn7X288GxA2UOiKkZ0oWF9up9Op5xEwrKymC7ylSADYardRiLn7h+LDZchcZIMwWVGXvO7Merx+d7dBhb3JLTU0k2sof7gbAg2ta2559tsXZbUVNo6CIl3eUbMoHO29+mGeYU8j1BFJHVCWRhG7b6iTsSbHe+/wB8T5uLphaTFOidTG5d0PdkgRtc6bcenAxbRmLRGgREaPwyBhckftfywZR06kywyySBn1dyykWdQN2O+/tx+3VQlqKmKKQRoka3VWAVmOkXI2sdwTz1xrvQEhb2jqI49oTIYpm7tlSTYWtuAdwdut7+mBcvpFp6dJjpqCrakeEeMJwbg88jrscAZ7E8TjvWMjl28YI0Wudh5+eKKfN6iEw92FtEmjSRswvff7D7Y6owfppIg37g7P4Y46tO6toeNWVr7sDx/HTC2mXXrfzx4zO1P3jkksSAPfB0MGmnKjkIcM/bGgpXsXmlvxtju5kX5HNsepHKwu8hUYmriLc3t5+eKbJleic/3E4jon/xHBizI48Jtistv8x+2NbCHikp4rH4gyMwbd7jfn+MW/0fxSU5dhr8SszEWAvt63uMDQV0lT3f/lzIYw+rRsfFt+2Cps1inhp45zeaFbBWDA6/M22xzyWRPRTQwqsjkpcsgNV445IwYlYgi1/Eb8iwB8vbA8neNWtCiLJDGo7qRjs/t9P0wYHE9A8eqIyvyEuQQPK/rzxe+KkZoPhYogNFyGlZSNI3JIv789bYgpN3yKtL4R3cpPKqiUogBc6FtpIJ6j1J254xGokhp5XQLbRu5bwm5PQdT64Php3rq5IoGjLM+hHfgb2vv6bjfyxTnEFVRZm1PXujdzdW0kEILWPiB38/pgRdsZ9FGZSGouO/YvfYS31A+t+dut+mBoswlh1OS2kxlVNhptYjge5wdTU4mBSsiawGpGUkgnoR/liqZYVjZVGtb7lCPpfzxlJf6sDXyGxVC/0mdJIo5HC95TllGsW6g8n5jceot1OFEhEOmKlnWQWBIXUAW/wkEdP32w4o8ratpJKpYQy05Cf7QBU6778Hi+BqmakukK0vdVCOvfd4DcsNiT+X+uCmZp0BxpLI5aOoqALbp3hGg9fpi+eJplEcrqC2le8HBF9rgYZZifiO7empYIG7kIyouoPbqb9TiholNEGFgrPYh21aP5tthPUvYyiLYKAxRrK76kJZAy7A+Enrgvs9l6UgqK51AeJe7hF+XI3b6D8yMNafK6g5DFKyFqaKdy8pGwuLefvgKZo0iSMsY4idOkHxKvt+Zxnkb0hlFKmCyd2zCyNZfCFKmw67+e/0xbQ1EwRFmjtISQXb/wDXcegJPTEaOmkq6kU1ArOXNoxfTa/v1wXkedU2WZmJamOKqaBrshGobHe+A02qSBSvYLCGy+tSeaIu+skkCw53AF/S2Lc1zZq3Nfjlp4ojfUQgsCdtwBxxi3NayDNakz09lhlchSm6htr8fp7YyVdWzU8zwhYwUbkG4w+PHKbt9iSnFGxyjPYqXM/i66iiq13JjYfNfzwpr6hqmsaYgJHr1KrWsN74yz19U3MpF/8ACAMUNI7/ADMW9zfF4eK07bJvMqpDHNJxUVMir/s1c6VJ4PXfywFugIU8+WKeuLI43ZhYHfy5x1KNKiV2XwA3j702RTquThss0DQSaJUJ0mwvhj2f7HVeYd3NVpJFT33UEByP2wZnvZvIMs8M8k8crfJFFIJGY+gxyTzYpT43v8F1jmo2loxqMWj3JJxYqqT4jb0w/o+xc9XA03etRkteKOrspdbc3HBvfA0vZbNYCxiMFQB1ikDjHTzh9keEvoV232P5Y69umCpKDNYge9y+QgdQv8YFZmU2elmB9VP8Yyal0LTXYHSyPHKCjFSTztt99sXTrVBxNMpILatRAsT9MSlo+7qBr0op02Q8tfnYY0OWZLR1dCHWZgxSzoWG3JvYnYbcm2BOajsAImeI9MzSalkQBUA3Nt7kbW6ceuLFzWmb8MMl2UFpXYi7ddv3OBpModqsUazQLf5ZG2AHocVVGSVdIfxoRpV7F1P52NttxvbqMR4YmOpy6H0NZJNGitH3AAsNDXV/t12NsaDJKHL5crlqs0q0hmdGMEa2k1EGxVri6nbr0xl6uhkyxoYKeqM0csCzeBGQe24HHF8eyPGu0xRzJdmVHvY9Da/kcc0oJv2nTGdIPoniqapkglVpA2gR6txvvsAQRviGaZTU5RU/D1PeCZh4onWwYfwfS30x2XU02TRU2bZeqLomKK9gwY24sfTfjrjysqpcxmCVz3bVdZVYkgew2/LAvenoPwH5NUPGJaRSFDsvgCKTJb+0tx/N/TC/OXVX0Sao6+F9jIigjYkK3Qnb1wIIpaeNRRVZSoA1kuSByeDuMNqukr6umizfN6ZJEqWK/ENL/cNyQN79NvTDJRT5MGwCnzCnggmmqVksPlZhcqeNPPBsDfDbXlsPZ1qkyl51mXvIVAa6kX1ahcdRtzjPgUsSvPNJJLGBZQgFyL+V8E5PmENJDKcpdoGYugZ41O5A456YMoJq6NG06YwObyU+VCOOS0UhJWEMLOdTWNuLWGEMy1ExYrrGjY3PJPJGGtRSoKamhgbvZEVRI+xueev1/LArZZmVROrwU0xBA1OV2OwuLfvgQ4pjTuqBKCSSONqd5LINtzux6D9B0xBKWF6+NFTTL89y2kcX3ufbDePs/XVlRHrp4kGvYGXe9tr8D9MEN2RnjqAauZIFew8A16eljvztiimreyLi/kWSK0S1MaTHuSBpC2sAfK1yOR9DhFXZbWBe/YNJrcjm7G3U/l98baTKKJYprZkg0G6966C4+U2sf+32wpekSqWaKJ2N12Yg72B2454/LDY8rQsooyKQO63vcYl8M1tVxbywYkbRs8RIJVrG2/54lwhAU46XMnxAoaZppxGguzcAkD9bY1mVtkmUwGZyZapdu8lWyp7AX++MusZ+J2Qmy3O17Y0VfTxy5NDMyAvDRKVPFjvieaPNcW9DwlxdoZR9o66uBpBLR0NPIbiqaK7W/wB0bm/vbFtDX5dlVQ8tLQvWTj5q2pmu5J8ui/Q4SZS4bLgs2plJv8uroOpwSXyyjp2E0XeJKbmPvL3IPVB++Od4lG4Qjr8D+o27kzUQdo0l2qJZYI+qvGkoN/UXbE2zPs9Kh72qhuDqIX8I/XUBjDTZrJEZIsrpRTIRYki/UHYdDxvgaVpoljmdI5Kg+MvIobYMbW29MSX8Ypbtof8Aza+DdSZ4JIyOzOXSyxjmpqToiH/M1r4RT5hCZWOYdpyJzytFTlol9Abb4zeYZnX11hWVMrjkR3IUew4wATawuPpjtw+HDEtEZ+RKYx+FkqJDUfJHq37zqbiwHmTf8sF5WiazUPZ0jjJeMmxI9PPFyxzVcMbRh3O6a2JYpzf2OGnZSvpTSxU0uWy1DRxkqY306mJ+VieAbD+MJlm+FpCyQXB2YpM+ijqsurnJfbTI4BjUcar9b/vhrluXZtCxyitcSxaPw5JhuGJN1ub+HYgHzxN6bI80dVenfLatQ5jpjdQVvu21yenHlgwNTUdKcrrVrzUMlhVyylY7A/MCQLWFvK9xfHC8k5PiZJFVJlVW9PNRZxTGSWNv/K1KgAcX0i56A7dOcJqfs8KL4umzA91OwvFUsLJb13tcc+vri2uppsxrv6XBmFVmM7JeOaaRDHGbcA6TcncGzbY0U+UZi9CKGJpZHpQsk9MDqV+bCwJGnYG62OGdw1Zrsx+S5WxovjMxzCKOEykR2szMbWuF69T78+WNH2fySdnneeET3j0xOQymPfkAXuDvzi/XDMHmocpLvAPh45GfXHFI3JII3ANuObYLkqI44TSS5tUCqa4DRR6oWZtgNvoMTnKb3Q0ZtGGz3LJ5e0VHRClUOYiLnfqd+bH640kWRUMVPGsqzVKpGSYxM2kt4eBcDqcLa3Ls7rK+nmknMdTFHZNUIRljJPv5E+eHlF2Dra00hqe0EgEqAggfKDbjYY7MMoySje0F8krZh89y+npK6KjqQ0ccyFlcixU32B88C0sEdFEIXaNnEhs19Pi2ANzth3/+S+y0fZqrpofj5ax5YzIWkBuu9rbk4XZbTLOcuE+llcAkSrdWvcbjrh8y4/obHLkN8tzRcorO8gekq1MIWRtpES99rjqLD2wDX541bMzf1F4InYkQ00JKLtewJ6YKemK51TUU8MVPYqksVOmhQdRXg3sbfnjbUfZhJaCSoYz913ZWRC4BYkruhFrGwA+/XEscI91Y+ST6MLlFdEs06SRVtXDOoDlac3iJtvEP8Xrvj3Mlp6OnkpaXJ8zMUoVtWYOEuw4I3W/TjrfG6pOzhiroa8OVSlkD6Nza7cA9RuefPFnadPiaiCWoFOaYah+MxWz6zc9NrW69cUjxt6JSulsw+W0OaVsbJR9nKdVkCiOU1UZC+Lked/Im22FucpWw5pV5fDaRo5mjUopVtrWJAGx59MfQpqTMaaWnnymtgNKB+F3UQ029Dv1OBVyl5+0kwI1NHIp1BN2IAvufXHPk8rHBN/RWGGUmfO17OVtPB3jxTKg2uIW3OGEHYrM6imNT8NUiELqMjIFFvO5OPree0MtXSRxTxPMCbkbkA+djjo8qhjpViaNgAttJGwH2xCf8lFSdRZVeK2uz5FT9lZJKqKOlmkbvluHiqFA036gA4r7R5VLkTTU9RmFRIRpXTpBtcav0BGPp0VPTwZ8VieEmOEkRKPEouu5/11xiO2dSpzarnaLW0bahceEWvyLcY7fFzvLiU2c2fHwnxQp7Odqx2YhqIJKZZZJWjLCUEFdBBsPDtfg42FD2ty3Mo5Wm7KUswV1EhR12JVfNfJfuTj5pnNNCIY6kVfeyTLrMaJbSSdwSevt5YfZXXf0ijkVqcyCbQdm4su17+jDHesutHK8ejYSjIKimkt2XkjbQQjRvGADYDnUOoJufPAkEfYfMi1JR5XmcneFdXwuuRkVSbkeJjwfbYeuEI7UwsNApZgD01r/OM/GtXHSlKCZgxYq/dyBdQPQ778jbfDRyt9iPHR72lp8tizVocoeU0tlCvP8ANwL3AA63wJShVhGvLYpid9TM5P5MMFQwPTxqKyieUXtdHK7D2vfnGjNfk+WxxQyQpdoxIFl1K636Eb7++IZckr6KQxujL1VfURU8MMT2b5mIFrn08tjhz2RFasYShFMGKq5kl5UXO/qP5wgmikeRSEaV7EjQpPluMaPsnLVUqq0ccqlYhqTuz0Y+fliOevSZV9mtpcqjpDJm/aaQP3aBVkQtCwUbABd7i9rHjDuOQFKZlytkhlcrG1TVE25IIuLL74yeX12vOpKvNKmRdvDqkA6ddtxyLevGGrV+W1veVX9Vigji8MUDTBtR4ub+5PP0x575KSZjTQxfCr8NHkVVLEpLo1PIrNEW5sdtvz+mF9Lk+SPHLL8bVUxZSsmuNUmtbe558vew98J6POXhhULmaCG5a5fwn6cYvl7ZTb685gF9iFkvYemKVCWzUx3HRrOkUlDDXZbQU57yWf8AuqBe9tjbfb74qhrIquZKBKapCzKV7sxEERkkBzc9TthRH2xgaaNqzMwwuAzCUna+9tsN/wDxZktVFFFS5vVwVDmzaQZTIfc8deu3lg9a2ahRn6tltPLWmWtM0drtVqdcrC4DA3AA4HGPMuyrN2yuKqqe0FXrMImCIgGnbYXv6Yh2jz6lzeGahhq6qQHQpedfIm++kbcYZ0uZ0r0emN5HWOiVZI4vMDcb4ngUouWvn+joyNOEUYLt5TTU4y+SetlqzND3iySvqaxtYHA8ZaHJspqgD4Q4Ntjs18X9ua+TM5aM/CyQRxRaEV2LeHa25AxKsW/Yui6GJybEdSSLfnjrSuOySdPRZHPJP2rppNMimZoyO+Jc73IJNhe/PHXrj6Hk+aVVVQimpYqePu1ALKGc3BtcgAWN998fI5q55qrL57CQxU8SEMuzaCyi49rY3lJXg5Q8s9Hl6TMGsryFCrX2JU3J6dcNx4y0FvWxxRZhWVVXFTyVmoXLSRxqNOzDmwHvi7MJjNV0tG7waO/1d08ZOxJuTvYLsPPGXyTOVo83gkqcwyt4YyVLLKC1vMX6cbYa1faJaerSvoa+jehjdRIWGrS+okHbfjGV2J8GgmkpRSzhpowIjZIxLpWwNvlvjPS1slP2lq3tT2Zx4nBJ4HS+J13bKgzGD4RswgqDNIryRxKVuFN+XNumM9UVUpzudwW7xioZ9S3AsN7AnHJ5eO4s6fHlUjcT5gk2lZZFlY76lgAAHlc4Jp6svGVhd0AFyWsevFrYzS5uI7I81OSfOK+LBmSTKdbsRfbZgL+m+PI9PInyaO/lF6R6czjbPp6d10TLA39xPhuh/jGR7TLqqK+UBWkSMOl01C9zg4TxnO5XiYeOIgWvv8p5J/bF1dMlLTZg7Ohd8tHg12ZmPS2Pe8LHH0oxujy/Kk1O0Yv4ZajKy0oQEOwL2JJ8trgY1uTU+iskRlKKYlKi/TRHY4hkmS01TlImrJ6WOISsHV2tJJcC1vYkHBmXQLHVSCEEggAAHm6p54rBtNpkpU4oMkQd24vfSCPXzxgaahjqZUhqZUhMs4RGcbarKCD5cjz5GNLk0bRZg8mgEsgUC9ibjjBud5JGsNFUwxmMQhXPfRgkMxspsOot1/wDFMc6dm9O9CxMpzehy18uEsy00suzxBmCr6bgW43B88FS0Urd3LGqOJI1PePA512AW4tcf2+fN8K6mqqaJo4KWtqoWEYIZpLsth/xDy5ucJp6jN1cpHWVAVdrKC1t/QEfnis4zybsCcY6BqLMqrLmRqImGRRpD6rkA2uOPTBC1WY1zt3ubVIVt2AdwD+dseVFPQwpTGlrXmnf/aJ3GlY/QNfxfYYhJMIFYyK1jbSAOR/qx++OVtvrsrSLFpqSIE6Wla9yZG5P0tibSd2LxaYR00IF/Mb/AJ4lFRPVxaQlU6E2Bp0DfqRhtl2RDLz3whnJPzCtMAAI8r6rfbEuWtszaRm6ianeQhptczEfMbkn3wZHlNSULmNQPLvVv+uNDX1WYtLooZ6cdNNPMrMNupVVtha9JPRwvUZoncyvZY53jbu79dbC544J288Hl0k9m5fIup6aOSSRJo5kEe7EXb67DD2np8ooBDNLHJO+u284uo6nRex6cnARhhlaIRyS1MY+Y9+jIT6Bdrf6tim8tO5Y02iJdlCxW+pP0wWm+rMmNJf6XWMqUlAW1bExwd6x28h/ODocsywUut8vqTzd7RIo68HcDCWStiqApaqcX8IGo3G+49D/ADgQsrvtUF2I8IJvc+uBFv4DoczdmqeorTT96lOi7K0sVzawvvcX+gwBmNHBRZWwiZDI8mkDTY6VvcnfzthbG0iHuZCHa/hA4Ppt+mKmXvmYyk3ZCqm9rYf3PTZqXZQCVSZgD+GFIt1F9jjSUjNLlwSmnRy9iy/HTIwPUWBI98K48vVaUtMypqIS8m5sPIDck/bFQgamfwxnWDz8u/8A2w9/TM9jePKq/wCHM0WtYw2kCPMX5+2DIKCvoXLSxTurAl42r10ye9497bHCiSuq2aBZKt5ZlCsE1sxHvbY4POcV6rGskveFNgJVI9rn032wvOdi8UG1FbUU8LvNFmMkcsgMZ+MidU4JA8A6WH2wpkqZWmkkUZjaQ+cT39+L4JTOal446XRShgWZNwz3PNhyb7fxiZlD1iJRZVMKzUD4Tpjv/vahcfbGlJ17kZd6YlaKmqqnuzHO0rmyioiRQxAO11PAG/vbGoSgzGnj+JMcKnQpY6xq8Q5FjtziySslSo7ucxskkKq71MLKATuVQAeEb8nc4LmrDPSskcmXspILWqCpPp8p++I5JxdJloqStgkOR57K6SyUOvSpUPHYcbW56Wwpz0TwfEw1tLPAZoIxDLe3iW19jyPCB0wU2a1sdTI0laIIuAPjrge2Kczq2qqGKoGYU71kUupXkqAbr6AA3N/XFcVxholk3IVTVcHwcMZq8wKOOFRHuRuOq/6AxODOI6anKU9VmKsL7aYeb7kjnf3x5AUzqsL5jKzyk3YxgJc2twAB0HGHJ7Bw1satRpO0hGpgXF+dreE/tg+rFOpG9O1ohkGYutUktAtTNUtfSkyqQRYjhb4Kp80nopJfifiGUIQXZ21RW6glef0wJSdjJ6Xv41pVJiktrmCAglFNgdV7bjGdGSZvLSmSF0kjvpYPKpJNgTsd+CMM+E9Jg9y2PYu0GXLSSCqrKpqlySW7ssrHf3/TE5e1WUlvEkDm3zdwVv8AQqcKKSjp0ohopJDUKp1GSBJE1b3GoG4+owtbMqVWKvQRoRtYRA/+4Yqq6Qj+z6fm69kcvyU0+V0dM1bIlmm0F3T2Zuvtj5jXa4nnjUh43vJGrcgA7j0wcZJJN2fp4r4DeAVNVO0lykK25tvzjlxXy9xSS+gZMzEpVHLRKByASfba3rh3lWbRLN4aKmICm00sRdzvbj19P+yaaGOnSHRRSifwjWwIUnrxzexwZTR5pPVqUjSjIAJdbJtqXnk8kfTF3CMkT/ZpantXXUtWEk7qniKKV/CWNzzxquMRmz+krZ4Jp6yokEbHVFM+q/TZSQv23wuzXI6quqIEqMyiqJtMaxyFT4Qz6d+p5B4wBm3Y+uyuAyVc9Ei36ytqf0C6bn6Yl6OOVO6G2aCFezc8rSwZYkpXkRREgH72wdRVdJJEJKLJKQXHheXQlx9LnGJyaOKB3WqLrGyiQNELkDfzsOmGlHk0tXRQTUq1KIZUjMrqoVdT2uDqueegwksSWmzRVk80y2pqp3m74wNqKmOKQhR6gWOAmy6alYd7maKyi4UzDVb2YYfydh87jb8HNIW9DM6/scK867JZwZIBUPFPIyOdQnvstjyQPPD48iuuSGlCl0XV9dlsVMiUEkqVQXxySKdX0K7fbCcOHpDEqtI56qnT64TS0kiEgxEEc4LyCKU12iJJGZl0aUFySTx+Rx05KcbJQ06D4qSoaZSZ5VHJUSk3P12wwoMvrYJDUNOZgqjwTzmx6Xt/OCqHsxnlZRQzx1McUbjwq8+kj6AYIPYrOe7Z58xh0KpJAmdjt/y45fWSdOSL8Pmj05k2XVCS1tOO5DWsrx6SfckYAznMsmzCUMaWliXhrupb3Gm/64VZnQutPTxlpu+mCsBKmkEW5Bub4VvlVSisxMYC8+O+LxjFq7JSbTo0lBW9n6KcNS9+ZQNnVmQj6qL4vl7Qy/EiamlmlmZ12liBFibc7E/bBHZbsgEzCNqpRWK9OZBFGhtyOow8zbJJ4nm+DjgoQklJGI1iB8ZkJDbeRIPO+OebxuXHv9lYqSViuqzHPJ8rqa2seKKkiW12QXe5sAObH3GMjW54Kip70UMItEIkV2JCqOPLD/tVlHaCncvmTiaPUB3iKpic3/uAA/6h7HC+maISsZcnjikemZU7pDYt/i8XGK4oQirSEnKTlQflFXljwI1XFSLVE6iDGyBQfJxfa31wb2Vsnak5pVSQspWQwRg6tABCjp5friK0sVZR08rQUr641a5Qq633tcYGp4oKKoURRqClQUZuTpYXA1cne2BcXaRqZ9DzOuyqsH4tHAWtzoF/vhfSZjBlszy04YBlChFPFr/zjOma5NiTfHuu4ub/AHwixIbkaWPtJOsVR3LIGllaRjKmsC+1hvxYDFHZ2nymTKxDmtLRSKqho5SG7xbRqPLnw83whBh/uUE+98eyVCmCSLXZGUpte4BFsBwaCmafJsmyZsmgnnYJL3eqTW5IB5PXGAzKOOjq2SSmoy8gWU6rNpLANbg8Xwzq634qkaCSCMtbSpG1gdiR9MQny3LKt+9dJVPkrj97nAWuwsQI9l6fXEIRojcb6ppuvlf+BiiOp08jFvea5I3LgBDfBSaFG1XGKmWkhMjICxY6bcAc/mMFmLKcvQ95LJUTmzBD6G++m354SwTM9YHAYqkZUH3P+WGcdLTTsJJ4I2bzK74RvjSYyRZmGbf1CrhNFEKNI2VUZF3sp1XAI87eeHP/AITGZQS1lTX1YlKkr36qzHbr5e2F8DU8OZQJEiqkcTHYDm4t++HbZrL3LJEQC+x9jjSyPSiZR+yrst2dy+Kqlnq9FT3MUJj7waQCyljccEi4++GuXJQHsopdUEqTi7C/ScftjHQ1FdJHVQimZ0eQqxWZQLKoQDz4XkeeDKGmqlpPhmmjp4DbUqEu7WN/m2A46C/rgzX2wJv4R9LkyjLZL+KZPaS/63xm+0mUslZSwZVVaXME7s03iCABBsP+bBEWZsiCx2A0qL4EnzNJc0Yk7x0TD/1sP/hjnjHdpFWZWk7Cz1FFBP8AGU4SWNZPGDtqF/3wX2IyGODPJ1mmVVRZFVoyL3WRVPPni+qzOqpKOCkSGaRYYUQTRR94NhYgqNx6YWZLV1dPXM9HT1DtouROSgN2PJbe1x0HTHUuUou2SdJ6Rvez+T0b5VC8lVOhOrZWA/uPpg+pynL46WZvialyI22aQW49BjO5LWvBl8ME7LqQHUw4ve+33xbX5pE1NLGHuWQqCDaxI98cyir6K3oW9oKHL2yPKkjISZpIR3krGygix2uMBT9i6ZMvmlkzJ37uJpNKxDcAX6k4WZm1YYoO8eCYKyKpuUJPAuN1+oAwZStWCmliq5I1iaJoxDCzMSGFiSx3P088dFVHTJdvZo+z1H/RK6jQVks0bUj7SEfh7obDbjCvtF2gbvKqNI0WcVUUgSQgH8MIbeZ38r46bM3+LonuLhWW/Nxp/wDrgOvmE7sZAjljc3F8KnTtoZq1o7Oe06V9Fobu0mWVJe6vyqsGO3lbi+BM2o6Gdu8hmkUi/hLare172wPUJEsEiQwxJrUr4VA5wuFZI8CFzZtIv74P/Iv7LsvtDAyrI5Idh4jtYGw/IYolldqhk1WB0m/qp/ywL30itIL+FmuCPbF8cg9MVj2KxgspPUX9MXLIw6g+hwCsxA2IGJ9+X+cG3rviypCBZdG+ZCP+HFc8MiAPokCkXBKnfECUZRpJxYtbMqBBKJFHAk3tguKZroG1E9cean/xnFkk6OGPci9udXB87WxSWUbH7jribghlISIbnBMQXqBgAPi1JR54SUWOmM0kA458sXfFSDphaso88T78cXxJwDYbBOTO07sVJXTb2wUK23D78jClZFPni0OoHnjNBGWXVJp6bSWOoszE38zfBSVoJ3It09cJUkAO2LxKANRHH3wjVsNmhgrj5322BwJHWsmY1BJWxiQD6Fr/AKjCxJWYl9RufriMkmmQMOuxOCtaA9j1czKklZDq54wFTVpbMahiwUNEi3Puf5wt73SxI64gjEOSDgrRjT09SRt3jDy9cRqKlNWpeuES1DjqMeme4uzb4FGL8yqC8SAG5WVGA9mBOLfjyAQJAR6YUySXN+uIB7C/XDdqgB81UyvTujXMb3t6WtiySpEh1LyeRhVI+rHCXjfGowbNL4CQTcflgHWMReXyOKmcNuux8sNFAstuurn6Y7VbjFI33tj2+KoUKVrjEwcCaiODbEw5HzHDAL+8twTjX9nMgjqKWira6TUJ5WK0oJRpY1A3DWsBe9+v3GMSZPU42nYzO6ErT0tbojqacGOKaWUIvdk34tbVew3PGGj2c/kqThSNL2j7N0VXWUkQRKBn0o0qv3isNNgNKj5rg79ftb5rVRzUtTLTzgrLE5RlPQg4+r9sq/K4njDR0rlYllWGmnUNdV1agBfg7dNuuPjVbXNV1c1TKArzOXIFrC56emDKhPHi4yYOVRQSI12wCXuTYAb8DHY7E8e0dhIMb84sUnHmOwZBCE4xdfbHY7EWMSTHuolj6Y7HYUJISMvBxS7sTucdjsZIx5rYdcSjdr847HYYB6JWv0x6zt547HYBiGsnHh3x2OwQEQN8SOPMdjAK2GKQSHsMdjsOjBANxc+WPLnHY7BQD3HAkjHY7DAPCTjxbFWJF7NjsdggPAq2ICgbX2Fsc/zHHY7GYT//2Q=="
+          alt=""
+        />
+        <p></p>
+      </div>
+      <div class="coffe-of">
+        <h4>Vanilla Milkshake</h4>
+        <span>Tall(354ml) per serve(354ml)-41kcal</span>
+      </div>
+      <div class="cofee-button">
+        <button>Add items</button>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-header">
+        <div class="footer-left">
+          <img src="https://www.starbucks.in/assets/icon/logo.png" alt="" />
+        </div>
+      </div>
+      <!--table
+      -->
+      <div class="footermenu">
+        <div class="footermenuitem">
+          <h3>About Us</h3>
+          <ul>
+            <li id="Our"><a>Our Haritage</a></li>
+            <li id="Cof"><a>Coffehouse</a></li>
+            <li id="Ou"><a>Our Company</a></li>
+          </ul>
+        </div>
+        <div class="footermenuitem">
+          <h3>Responsibility</h3>
+          <ul>
+            <li id="Dive"><a>Diversity</a></li>
+            <li id="Cumm"><a>Cummunity</a></li>
+            <li id="Ea"><a>Eathical shourcing </a></li>
+            <li id="Env"><a>Environmental</a></li>
+            <li id="Stew"><a>Stewardship</a></li>
+            <li id="Learn"><a>Learn More</a></li>
+          </ul>
+        </div>
+        <div class="footermenuitem">
+          <h3>Quick Links</h3>
+          <ul>
+            <li id="Pri"><a>Privacy Policy</a></li>
+            <li id="FAq"><a>FAQs</a></li>
+            <li id="Star"><a>Starbucks India Mobile</a></li>
+            <li id="App"><a>App Terms of Use</a></li>
+            <li id="Cus"><a>Customer Service</a></li>
+            <li id="St"><a>Starbucks Rewards Day Offer</a></li>
+            <li id="Deliv"><a>Delivery</a></li>
+            <li id="Sea"><a>Season's Gifting</a></li>
+            <li id="Off">
+              <a>Offer for Beverage Subscription at Starbucks.</a>
+            </li>
+            <li id="Loya"><a>Loyalty Program Terms and Conditions</a></li>
+            <li id="Beve"><a>Beverage Subscription</a></li>
+          </ul>
+        </div>
+
+        <div class="footermenuitem">
+          <div class="sociallinks">
+            <h3>Social links</h3>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-facebook"></i>
+            <div class="foo-img">
+              <a href="#" class="downloadapp">
+                <img
+                  src="https://b.zmtcdn.com/data/webuikit/9f0c85a5e33adb783fa0aef667075f9e1556003622.png"
+                  alt=""
+                />
+              </a>
+              <a href="#" class="downloadapp">
+                <img
+                  src="https://b.zmtcdn.com/data/webuikit/23e930757c3df49840c482a8638bf5c31556001144.png"
+                  alt=""
+                />
+              </a>
+            </div>
+          </div>
+        </div>
+        <!---->
+      
+      </div>
+  
+    </footer>
+  </body>
+</html>

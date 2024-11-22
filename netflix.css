@@ -1,0 +1,9 @@
+body{
+    background-color: black;
+    color: azure;
+}
+.header{
+position: relative;
+height: 70px;
+width: 50px;
+}

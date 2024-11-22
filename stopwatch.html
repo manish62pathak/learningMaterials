@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hero {
+        width: 100%;
+        min-height: 100vh;
+        background: linear-gradient(45deg, #08001f, #30197d);
+        color: #fff;
+        position: relative;
+      }
+      .container {
+        width: 800px;
+        height: 180px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .clock {
+        width: 100%;
+        height: 100%;
+        background: rgb(235, 0, 255, 0.11);
+        border-radius: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        backdrop-filter: blur(40px);
+      }
+      .container::after {
+        content: "";
+        width: 180px;
+        height: 180px;
+        background: chocolate;
+        border-radius: 50%;
+        position: absolute;
+        right: -30px;
+        bottom: -50px;
+        z-index: -1;
+      }
+      .container::before {
+        content: "";
+        width: 180px;
+        height: 180px;
+        background: rgb(210, 30, 141);
+        border-radius: 5px;
+        position: absolute;
+        left: -50px;
+        top: -50px;
+        z-index: -1;
+      }
+      .clock span {
+        position: relative;
+        text-align: center;
+        font-size: 80px;
+        width: 110px;
+        display: inline-block;
+      }
+      .clock span::after {
+        content: "";
+        font-size: 16px;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+      #hrs::after {
+        content: "HRS";
+      }
+      #min::after {
+        content: "MIN";
+      }
+      #sec::after {
+        content: "SEC";
+      }
+    </style>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="container">
+        <div class="clock">
+          <span id="hrs">00</span>
+          <span>:</span>
+          <span id="min">00</span>
+          <span>:</span>
+          <span id="sec">00</span>
+          <div class="btn">
+            <button id="start">Start</button>
+            <button id="reset">reset</button>
+            <button id="st">Stop</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+       let btnStart = document.querySelector("#start");
+      let btnReset = document.querySelector("#reset");
+      let stop = document.querySelector("#st");
+      let mS = 0;
+      let sec = 0;
+      let mnt = 0;
+      let hours = 0;
+      let timer = false;
+      stop.addEventListener("click", function () {
+        timer = false;
+      });
+
+      btnStart.addEventListener("click", function () {
+        console.log("clicked");
+        timer = true;
+        stopWatch();
+      });
+      btnReset.addEventListener("click", function () {
+        timer = false;
+        hours = 0;
+        sec = 0;
+        mS = 0;
+        mnt = 0;
+        document.querySelector("#hour").innerHTML = 00;
+        document.querySelector("#mnt").innerHTML = 00;
+        document.querySelector("#second").innerHTML = 00;
+        document.querySelector("#ms").innerHTML = 00;
+      });
+
+      function stopWatch() {
+        if (timer) {
+          mS++;
+
+          if (mS == 100) {
+            sec++;
+            mS = 0;
+          }
+          if (sec == 60) {
+            mnt++;
+            sec = 0;
+          }
+          if (mnt == 60) {
+            hours++;
+            mnt = 0;
+          }
+
+          let hs = hours;
+          let ss = sec;
+          let mntS = mnt;
+          let mss = mS;
+
+          if (hours < 10) {
+            hs = "0" + hours;
+          }
+          if (mnt < 10) {
+            mntS = "0" + mnt;
+          }
+          if (sec < 10) {
+            ss = "0" + sec;
+          }
+          if (mS < 10) {
+            mss = "0" + mS;
+          }
+
+          document.querySelector("#hour").innerHTML = hs;
+          document.querySelector("#mnt").innerHTML = mntS;
+          document.querySelector("#second").innerHTML = ss;
+          document.querySelector("#ms").innerHTML = mss;
+          setTimeout(stopWatch, 10);
+        }
+      }
+    </script>
+  </body>
+</html>

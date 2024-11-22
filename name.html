@@ -1,0 +1,169 @@
+
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: antiquewhite;
+      }
+      .board {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        margin-right: auto;
+        margin-left: 20%;
+      }
+      .cell {
+        border-bottom: 5px solid black;
+        border-right: 5px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 90px;
+        font-weight: 900;
+        line-height: 95px;
+        padding: 20px;
+        text-align: center;
+        user-select: none;
+        cursor: pointer;
+      }
+      .cell.cell:nth-child(3n) {
+        border-right: none;
+      }
+      .cell:nth-child(n + 7) {
+        border-bottom: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="board">
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+      <div class="cell"></div>
+    </div>
+    <div class="control">
+      <h1 class="gs">Game Statement:</h1>
+    </div>
+    <div class="btn">
+      <button>Start</button>
+    </div>
+    <script>
+      let board = document.querySelector(".board");
+      let cell = document.querySelector(".cell");
+      let btn = document.querySelector("button");
+      let gs = document.querySelector(".gs");
+      let turn = "x";
+      let count = 0;
+      let gamePlay = true;
+      btn.addEventListener("click", function () {
+        if (gamePlay) {
+          turn = "x";
+          gamePlay = false;
+          btn.innerText = "Restart";
+          gs.innerText = "";
+        } else {
+          gamePlay = true;
+        }
+      });
+      board.addEventListener("click", function (event) {
+        let col = event.target;
+        if (col.innerText == "") {
+          col.innerHTML = turn;
+          count++;
+          if (turn == "x") {
+            col.style.backgroundColor = "red";
+            turn = "o";
+          } else {
+            turn = "x";
+          }
+          gs.innerHTML = turn + "turn";
+          let check = checkWinner();
+
+          if (check == 1) {
+            console.log("ytggef")
+            gs.innerText = "X is winner congrants";
+            alert("X winner");
+          } else if (check == "o") {
+            gs.innerText = "O is winner";
+          } else {
+            gs.innerText = "Game is tie";
+          }
+        } else {
+          alert("Wrong click");
+        }
+      });
+      function checkWinner() {
+        if (
+          (cell[0].innerHTML == "x" &&
+            cell[1].innerHTML == "x" &&
+            cell[2].innerHTML == "x") ||
+          (col[3].innerHTML == "x" &&
+            col[4].innertext == "x" &&
+            col[5].innertext == "x") ||
+          (col[6].innertext == "x" &&
+            col[7].innertext == "x" &&
+            col[8].innertext == "x") ||
+          (col[0].innertext == "x" &&
+            col[3].innertext == "x" &&
+            col[6].innertext == "x") ||
+          (col[1].innertext == "x" &&
+            col[4].innertext == "x" &&
+            col[7].innertext == "x") ||
+          (col[2].innertext == "x" &&
+            col[5].innertext == "x" &&
+            col[8].innertext == "x") ||
+          (col[0].innertext == "x" &&
+            col[4].innertext == "x" &&
+            col[8].innertext == "x") ||
+          (col[2].innertext == "x" &&
+            col[4].innertext == "x" &&
+            col[6].innertext == "x")
+        ) {
+          return 1;
+        } else if (
+          (col[0].innertext == "o" &&
+            col[1].innertext == "o" &&
+            col[2].innertext == "o") ||
+          (col[3].innertext == "o" &&
+            col[4].innertext == "o" &&
+            col[5].innertext == "o") ||
+          (col[6].innertext == "o" &&
+            col[7].innertext == "o" &&
+            col[8].innertext == "o") ||
+          (col[0].innertext == "o" &&
+            col[3].innertext == "o" &&
+            col[6].innertext == "o") ||
+          (col[1].innertext == "o" &&
+            col[4].innertext == "o" &&
+            col[7].innertext == "o") ||
+          (col[2].innertext == "o" &&
+            col[5].innertext == "o" &&
+            col[8].innertext == "o") ||
+          (col[0].innertext == "o" &&
+            col[4].innertext == "o" &&
+            col[8].innertext == "o") ||
+          (col[2].innertext == "o" &&
+            col[4].innertext == "o" &&
+            col[6].innertext == "o")
+        ) {
+          return 2;
+        }
+      }
+    </script>
+  </body>
+</html>
+
+</body>
+</html>
